@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar" data-theme="dark">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>سلة المشتريات</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <div class="logo">مكتبتي</div>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="#books">الكتب</a></li>
+                    <li><a href="#categories">التصنيفات</a></li>
+                    <li><a href="#contact">اتصل بنا</a></li>
+                    <li><button class="theme-toggle" onclick="toggleTheme()">تغيير المظهر</button></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="cart-section">
+                <h1>سلة المشتريات</h1>
+                <div id="cartItems" class="cart-items">
+                    <!-- Cart items will be added here -->
+                </div>
+                <div class="cart-summary">
+                    <h3>بيانات الطلب</h3>
+                    <div class="order-form">
+                        <input type="text" id="customerName" placeholder="الاسم *" class="form-input" required>
+                        <input type="tel" id="customerPhone" placeholder="رقم الهاتف *" class="form-input" required>
+                        <textarea id="customerAddress" placeholder="العنوان *" class="form-input" required></textarea>
+                        <p class="required-notice">* جميع الحقول مطلوبة</p>
+                    </div>
+                    <h3>ملخص الطلب</h3>
+                    <p>المجموع: <span id="cartTotal">0 جنيه</span></p>
+                    <button class="confirm-button" onclick="confirmOrder()">تأكيد الطلب</button>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <!-- ...existing footer... -->
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+
+</html>

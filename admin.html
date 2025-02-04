@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar" data-theme="dark">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>لوحة التحكم</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="admin.css">
+    </head>
+
+    <body>
+        <div id="loginPanel" class="admin-login">
+            <h2>تسجيل دخول المدير</h2>
+            <input type="password" id="adminPassword" placeholder="كلمة المرور" class="form-input">
+            <button onclick="login()" class="cta-button">دخول</button>
+        </div>
+
+        <div id="adminPanel" class="admin-panel" style="display: none;">
+            <header>
+                <nav>
+                    <div class="logo">لوحة التحكم</div>
+                    <button onclick="logout()" class="theme-toggle">تسجيل خروج</button>
+                </nav>
+            </header>
+
+            <main>
+                <div class="admin-sections">
+                    <section class="admin-section orders-section">
+                        <h2>الطلبات</h2>
+                        <div class="orders-filters">
+                            <button onclick="filterOrders('all')" class="filter-button active">جميع الطلبات</button>
+                            <button onclick="filterOrders('pending')" class="filter-button">طلبات جديدة</button>
+                            <button onclick="filterOrders('completed')" class="filter-button">طلبات مكتملة</button>
+                        </div>
+                        <div id="ordersList" class="admin-list">
+                            <!-- Orders will be listed here -->
+                        </div>
+                    </section>
+                    <section class="admin-section">
+                        <h2>إدارة الكتب</h2>
+                        <form id="bookForm" class="admin-form">
+                            <input type="hidden" id="bookId">
+                            <input type="text" id="bookTitle" placeholder="عنوان الكتاب" required>
+                            <input type="text" id="bookAuthor" placeholder="المؤلف" required>
+                            <input type="number" id="bookPrice" placeholder="السعر" required>
+                            <input type="text" id="bookImage" placeholder="رابط الصورة" required>
+                            <select id="bookCategory" required>
+                                <!-- Categories will be added here -->
+                            </select>
+                            <button type="submit" class="cta-button">حفظ الكتاب</button>
+                        </form>
+                        <div id="booksList" class="admin-list">
+                            <!-- Books will be listed here -->
+                        </div>
+                    </section>
+
+                    <section class="admin-section">
+                        <h2>إدارة الأقسام</h2>
+                        <form id="categoryForm" class="admin-form">
+                            <input type="hidden" id="categoryId">
+                            <input type="text" id="categoryName" placeholder="اسم القسم" required>
+                            <button type="submit" class="cta-button">حفظ القسم</button>
+                        </form>
+                        <div id="categoriesList" class="admin-list">
+                            <!-- Categories will be listed here -->
+                        </div>
+                    </section>
+                </div>
+            </main>
+        </div>
+
+        <script src="admin.js"></script>
+    </body>
+
+</html>
