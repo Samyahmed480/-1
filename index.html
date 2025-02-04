@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar" data-theme="dark">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="theme-color" content="#121212">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="description" content="مكتبة الكتب - تسوق أفضل الكتب العربية">
+        <link rel="manifest" href="manifest.json">
+        <link rel="apple-touch-icon" href="icon.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>مكتبة الكتب</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <div class="logo">مكتبتي</div>
+                <ul>
+                    <li><a href="#home">الرئيسية</a></li>
+                    <li><a href="#books">الكتب</a></li>
+                    <li><a href="#categories">التصنيفات</a></li>
+                    <li><a href="#contact">اتصل بنا</a></li>
+                    <li>
+                        <a href="cart.html" class="cart-button">
+                            السلة
+                            <span id="cartCount">0</span>
+                        </a>
+                    </li>
+                    <li><a href="admin.html" class="admin-link">لوحة التحكم</a></li>
+                    <li><button class="theme-toggle" onclick="toggleTheme()">تغيير المظهر</button></li>
+                </ul>
+            </nav>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="ابحث عن كتاب..." class="search-input">
+                <button onclick="searchBooks()" class="search-button">بحث</button>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero">
+                <h1>اكتشف عالماً من المعرفة</h1>
+                <p>تصفح مجموعتنا الواسعة من الكتب</p>
+                <button class="cta-button">تصفح الكتب</button>
+            </section>
+
+            <section class="featured-books">
+                <h2>الكتب المميزة</h2>
+                <div class="books-grid" id="booksContainer">
+                    <!-- Books will be added here by JavaScript -->
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>تواصل معنا</h3>
+                    <p>البريد الإلكتروني: info@bookstore.com</p>
+                    <p>الهاتف: 123-456-789</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+
+</html>
